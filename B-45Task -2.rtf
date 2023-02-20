@@ -1,0 +1,170 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Cambria;}{\f2\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.22000}\viewkind4\uc1 
+\pard\ri1348\sa200\sl276\slmult1\b\f0\fs22\lang9 1. \fs28 Write a blog on difference between Document and Window objects ?\fs24\par
+\f1 Document Object: \b0 The document object represent a web page that is loaded in the browser. By accessing the document object, we can access the element in the HTML page. With the help of document objects, we can add dynamic content to our web page. The document object can be accessed with a window.document or just document.\par
+\b Syntax:\par
+
+\pard\ri2342\sa200\sl276\slmult1\tx3408\tx9798               \b0 document.property_name;\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\ri2342\sa200\sl276\slmult1\tx3408\tx9798 It represents any HTML document or web page that is loaded in the browser.\par
+{\pntext\f2\'B7\tab}It is loaded inside the window.\par
+{\pntext\f2\'B7\tab}It is the object of window property.\par
+{\pntext\f2\'B7\tab}All the tags, elements with attributes in HTML are part of the document.\par
+{\pntext\f2\'B7\tab}We can access the document from a window using the window. document\par
+{\pntext\f2\'B7\tab}The document is part of BOM (browser object model) and dom (Document object model)\par
+{\pntext\f2\'B7\tab}Properties of document objects such as title, body, cookies, etc can also be accessed by a window like this window. document.title\par
+{\pntext\f2\'B7\tab}\b example\b0 : document.title :  will return the title of the document\par
+
+\pard\ri-1492\sa200\sl276\slmult1\b The properties of document objects that are commonly used are listed in the below table\b0\par
+Properties of document:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\ri-1492\sa200\sl276\slmult1\b activeElement\b0 : It returns the currently active elements in the document.\par
+{\pntext\f2\'B7\tab}\b body\b0 : It returns the contents of the body element.\par
+{\pntext\f2\'B7\tab}\b anchors\b0 : It returns all <a> elements that have a name attribute.\par
+{\pntext\f2\'B7\tab}\b baseURI\b0 : It returns a string value that represents the base URI of the document.\par
+{\pntext\f2\'B7\tab}\b cookie\b0 : It returns the cookie of the current document.\par
+{\pntext\f2\'B7\tab}\b charSet: \b0 It returns a string, representing the document\rquote s character encoding.\par
+{\pntext\f2\'B7\tab}\b defaultView: \b0 It returns the current Window Object.\par
+{\pntext\f2\'B7\tab}\b designMode: \b0 It is used to set documents as editable or read-only.\par
+{\pntext\f2\'B7\tab}\b domain: \b0 It returns the domain name of the document server.\par
+{\pntext\f2\'B7\tab}\b doctype: \b0 It returns the document\rquote s doctype.\par
+{\pntext\f2\'B7\tab}\b embeds: \b0 It returns the collection of all embedded elements.\par
+{\pntext\f2\'B7\tab}\b URL: \b0 It returns the complete URL of the document.\par
+{\pntext\f2\'B7\tab}\b forms: \b0 It returns all the elements of the form.\par
+{\pntext\f2\'B7\tab}\b fullScreenElement: \b0 It returns the element that is currently present in full-screen mode.\par
+{\pntext\f2\'B7\tab}\b title: \b0 It returns the title element of the document.\par
+{\pntext\f2\'B7\tab}\b head: \b0 It returns the head element of the document.\par
+{\pntext\f2\'B7\tab}\b links: \b0 It returns all <area> and <a> elements that have a href attribute.\par
+{\pntext\f2\'B7\tab}\b lastModified: \b0 It returns the date and time of the current document that was last modified.\par
+{\pntext\f2\'B7\tab}\b images: \b0 It returns the collection of <img> elements in the document.\par
+{\pntext\f2\'B7\tab}\b implementation: \b0 It returns the DOMImplementation object associated with the current document.\par
+{\pntext\f2\'B7\tab}\b readyState: \b0 It returns the loading status of the current document.\par
+{\pntext\f2\'B7\tab}\b referrer: \b0 It returns the URI of the page that is linked to the current page.\par
+{\pntext\f2\'B7\tab}\b scripts: \b0 It returns all script elements present in the document.\par
+{\pntext\f2\'B7\tab}\b strictErrorChecking: \b0 It sets or returns whether strict error checking can be enforced on a document or not.\par
+
+\pard\ri-1492\sa200\sl276\slmult1\b\f0\fs28 Example: This example describes the implementation of the document.object\b0\fs24 .\par
+
+\pard\ri-1492\sa200\sl276\slmult1\qj\fs22 <!DOCTYPE html>\par
+<html>\par
+<head>\par
+    <title>document's Properties</title>\par
+    <style>\par
+      h1 \{\par
+          color: green;\par
+      \}\par
+    </style>\par
+</head>\par
+\par
+<body>\par
+    <h1> GeeksforGeeks</h1>\par
+    <button onclick="myFunction()">CLICK ME</button>\par
+    <p id="demo"></p>\par
+\par
+   <script>\par
+        function myFunction() \{\par
+            var title = document.title;\par
+            var domain = document.domain;\par
+            var body = document.body;\par
+            document.getElementById("demo").innerHTML =\par
+            "the title of the document is : "\par
+            + title\par
+            + "<br>"\par
+            + "domain : "\par
+            + domain\par
+            + "<br>"\par
+            + "body : "\par
+            + body;\par
+        \}\par
+    </script>\par
+</body>\par
+ \par
+</html>\par
+\b\f1\fs24 Window Object\b0 : The window object is the topmost object of the DOM hierarchy. It represents a browser window or frame that displays the contents of the webpage. Whenever a window appears on the screen to display the contents of the document, the window object is created. \par
+\b Syntax:\par
+             window.propertyname;\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\ri-1492\sa200\sl276\slmult1\qj\b0 It represents a browser window or frame that displays the contents of the webpage. \par
+{\pntext\f2\'B7\tab}It is the very first object that is loaded in the browser.\par
+{\pntext\f2\'B7\tab}It is the object of the browser\par
+{\pntext\f2\'B7\tab}We can access the window from the window only. i.e. window.window\par
+{\pntext\f2\'B7\tab}Global objects, functions, and variables of JavaScript are members of the window object.\par
+{\pntext\f2\'B7\tab}The window is part of BOM, not DOM.\par
+{\pntext\f2\'B7\tab}Properties of the window object cannot be accessed by the document object.\par
+{\pntext\f2\'B7\tab}\b example: \b0 window.innerHeight : will return the height of the content area of the browser\par
+
+\pard\ri-1492\sa200\sl276\slmult1\qj\b The properties of Window objects that are commonly used are listed in the below table:\par
+Properties of the window:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\ri-1492\sa200\sl276\slmult1\qj\b0 Closed: It holds a Boolean value that represents whether the window is closed or not.\par
+{\pntext\f2\'B7\tab}console: It returns a reference to the console object which provides access to the browser\rquote s debugging console.\par
+{\pntext\f2\'B7\tab}defaultStatus: It is used to define the default message that will be displayed in the status bar when no activity is carried on by the browser.\par
+{\pntext\f2\'B7\tab}controllers: It returns the XUL controller objects for the current Chrome window.\par
+{\pntext\f2\'B7\tab}customElements: It returns a reference to the CustomElementRegistry object, which can be used to register new custom elements and also get information about already registered custom elements.\par
+{\pntext\f2\'B7\tab}crypto: It returns the browser crypto object.\par
+{\pntext\f2\'B7\tab}devicePixelRatio: It returns the ratio between physical pixels and device-independent pixels in the current display.\par
+{\pntext\f2\'B7\tab}Document: It returns a reference to the document object of that window.\par
+{\pntext\f2\'B7\tab}DOMMatrix: It returns a reference to a DOMMatrix object, which represents 4\'d74 matrices, suitable for 2D and 3D operations.\par
+{\pntext\f2\'B7\tab}frames[]: It represents an array that contains all the frames of a given window.\par
+{\pntext\f2\'B7\tab}DOMPoint: It returns a reference to a DOMPoint object, which represents a 2D or 3D point in a coordinate system.\par
+{\pntext\f2\'B7\tab}History: It provides information on the URLs visited in the current window.\par
+{\pntext\f2\'B7\tab}Length: It represents the number of frames in the current window.\par
+{\pntext\f2\'B7\tab}DOMRect: It returns a reference to a DOMRect object, which represents a rectangle.\par
+{\pntext\f2\'B7\tab}fullScreen: This property indicates whether the window is displayed on full screen or not.\par
+{\pntext\f2\'B7\tab}Location: It contains the URL of the current window.\par
+{\pntext\f2\'B7\tab}innerHeight: It is used to get the height of the content area of the browser window.\par
+{\pntext\f2\'B7\tab}innerWidth: It is used to get the width of the content area of the browser window.\par
+{\pntext\f2\'B7\tab}Name: It contains the name of the referenced window.\par
+{\pntext\f2\'B7\tab}Window: It returns the current window or frame.\par
+{\pntext\f2\'B7\tab}Navigator: It returns a reference to the navigator object.\par
+{\pntext\f2\'B7\tab}outerHeight: It will get the height of the outside of the browser window.\par
+{\pntext\f2\'B7\tab}outerWidth: It will get the width of the outside of the browser window.\par
+{\pntext\f2\'B7\tab}Status: It overrides the default status and places a message in the status bar.\par
+{\pntext\f2\'B7\tab}Top: It returns a reference to the topmost window containing a frame if many windows are opened.\par
+{\pntext\f2\'B7\tab}Toolbar: It will result in the toolbar object, whose visibility can be toggled in the window.\par
+{\pntext\f2\'B7\tab}Opener: It contains a reference to the window that opened the current window.\par
+{\pntext\f2\'B7\tab}Parent: It refers to the frameset in which the current frame is contained.\par
+{\pntext\f2\'B7\tab}Screen: It refers to the screen object\par
+{\pntext\f2\'B7\tab}Self: It provides another way to refer to the current window.\par
+
+\pard\ri-1492\sa200\sl276\slmult1\qj\b\f0\fs28 Example: This example describes the implementation of the window.object.\par
+\b0\fs22 <!DOCTYPE html>\par
+<html> \par
+<head>\par
+    <title> Window's Properties</title>\par
+    <style>\par
+        h1 \{\par
+            color: green;\par
+        \}\par
+    </style>\par
+</head>\par
+<body>\par
+    <h1>GeeksforGeeks</h1>\par
+    <button onclick="show()">Check</button>\par
+    <p id="prop"></p>\par
+\par
+    <script>\par
+        function show() \{\par
+            var h = window.innerHeight;\par
+            var w = window.innerWidth;\par
+            var l = window.location;\par
+            var c = window.closed;\par
+            document.getElementById("prop").innerHTML =\par
+            "Frame's Height: "\par
+            + h + "<br>"\par
+            + "Frame's Width: "\par
+            + w + "<br>"\par
+            + "Window location:"\par
+            + l\par
+            + "<br>"\par
+            + "Window Closed: "\par
+            + c;\par
+        \}\par
+    </script>\par
+</body>\par
+ \par
+</html>\par
+Output:\par
+\par
+}
+ 
